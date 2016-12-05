@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">NetworkSecurityConfigSampleApp</string>
+    <string name="default_url">https://selfsigned.jssec.org/droid_knight.png</string>
+    <string name="btn_text">Private Certificate HTTPS</string>
+</resources>
