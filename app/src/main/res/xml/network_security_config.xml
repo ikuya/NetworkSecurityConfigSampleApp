@@ -5,5 +5,8 @@
         <trust-anchors>
             <certificates src="@raw/cacert"/>
         </trust-anchors>
+        <!--<pin-set expiration="">-->
+            <!--<pin digest="SHA-256">97YHZjeZjDPk2epQqtD4JirDz2/EsSZawmVHMFr7eQQ=</pin>-->
+        <!--</pin-set>-->
     </domain-config>
 </network-security-config>

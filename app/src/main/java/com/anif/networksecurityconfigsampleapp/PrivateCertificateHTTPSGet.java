@@ -44,6 +44,13 @@ public class PrivateCertificateHTTPSGet extends AsyncTask<String, Void, Object> 
         } catch (IOException e) {
             e.printStackTrace();
             return e;
+        } finally {
+            try {
+                is.close();
+                os.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 }
