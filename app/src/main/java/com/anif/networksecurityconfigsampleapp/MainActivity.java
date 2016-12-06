@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
                 if (mAsyncTask != null) mAsyncTask.cancel(true);
 
-                mAsyncTask = new NetworkSecurityConfigGet(this) {
+                mAsyncTask = new PrivateCertificateHTTPSGet(this) {
                     @Override
                     protected void onPostExecute(Object o) {
                         if (o instanceof Exception) {

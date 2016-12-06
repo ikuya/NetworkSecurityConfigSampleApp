@@ -15,15 +15,14 @@ import javax.net.ssl.HttpsURLConnection;
 /**
  * Created by if on 2016/12/06.
  */
-public class NetworkSecurityConfigGet extends AsyncTask<String, Void, Object> {
+public class PrivateCertificateHTTPSGet extends AsyncTask<String, Void, Object> {
 
 
-    public NetworkSecurityConfigGet(View.OnClickListener ctx) {
+    public PrivateCertificateHTTPSGet(View.OnClickListener ctx) {
     }
 
     @Override
     protected Object doInBackground(String... params) {
-//        return null;
         BufferedInputStream is = null;
         ByteArrayOutputStream os = null;
         byte[] buff = new byte[1024];
