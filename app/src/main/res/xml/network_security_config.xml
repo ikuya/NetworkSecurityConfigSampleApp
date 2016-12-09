@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <network-security-config>
-    <domain-config>
+    <!-- Opt-out of cleartext traffic -->
+    <domain-config cleartextTrafficPermitted="false">
         <domain includeSubdomains="true">jssec.org</domain>
+        <!--// Private Certificate -->
         <trust-anchors>
             <certificates src="@raw/cacert"/>
         </trust-anchors>
-        <!--<pin-set expiration="">-->
-            <!--<pin digest="SHA-256">97YHZjeZjDPk2epQqtD4JirDz2/EsSZawmVHMFr7eQQ=</pin>-->
+        <!--// Pinning -->
+        <!--<pin-set expiration="2018-12-31">-->
+            <!--&lt;!&ndash; selfsigned.jssec.org &ndash;&gt;-->
+            <!--&lt;!&ndash; https://selfsigned.jssec.org/droid_knight.png &ndash;&gt;-->
+            <!--<pin digest="SHA-256">e30Lky+iWK21yHSls5DJoRzNikOdvQUOGXvurPidc2E=</pin>-->
+            <!--&lt;!&ndash; google.com &ndash;&gt;-->
+            <!--&lt;!&ndash; https://www.google.co.jp/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png &ndash;&gt;-->
+            <!--<pin digest="SHA-256">LmtM7QBtqqbBD+aEj0X+U2w62Q4d5cnUop27INhTZ6c=</pin> &lt;!&ndash; google.com &ndash;&gt;-->
         <!--</pin-set>-->
+
     </domain-config>
 </network-security-config>
