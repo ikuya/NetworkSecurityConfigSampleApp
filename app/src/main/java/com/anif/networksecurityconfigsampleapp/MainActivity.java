@@ -11,8 +11,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 public class MainActivity extends AppCompatActivity {
 
     private EditText mUrlBox;
@@ -39,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
                 if (mAsyncTask != null) mAsyncTask.cancel(true);
 
-                mAsyncTask = new PrivateCertificateHTTPSGet(this) {
+                mAsyncTask = new HTTPSGet(this) {
                     @Override
                     protected void onPostExecute(Object o) {
                         if (o instanceof Exception) {

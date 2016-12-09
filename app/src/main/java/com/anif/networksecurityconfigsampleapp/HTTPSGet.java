@@ -1,6 +1,5 @@
 package com.anif.networksecurityconfigsampleapp;
 
-import android.content.Context;
 import android.os.AsyncTask;
 import android.view.View;
 
@@ -15,10 +14,10 @@ import javax.net.ssl.HttpsURLConnection;
 /**
  * Created by if on 2016/12/06.
  */
-public class PrivateCertificateHTTPSGet extends AsyncTask<String, Void, Object> {
+public class HTTPSGet extends AsyncTask<String, Void, Object> {
 
 
-    public PrivateCertificateHTTPSGet(View.OnClickListener ctx) {
+    public HTTPSGet(View.OnClickListener ctx) {
     }
 
     @Override
@@ -46,8 +45,8 @@ public class PrivateCertificateHTTPSGet extends AsyncTask<String, Void, Object> 
             return e;
         } finally {
             try {
-                is.close();
-                os.close();
+                if (is != null) is.close();
+                if (os != null) os.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
